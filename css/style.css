@@ -1,0 +1,443 @@
+/* Configurações de fontes da página*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Righteous&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-family: "Righteous", cursive;
+}
+
+/* Configurações do background geral da página*/
+
+body {
+  background-image: url(../img/img-de-fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.9); /* Valor de opacidade: 0.5 */
+  background-blend-mode: overlay; /* Define o modo de mesclagem do background */
+}
+
+/* Estilização do Header */
+
+.header-conteiner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #040404;
+  padding: 10px;
+  width: 100%;
+}
+
+.logo-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-titulo img {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+}
+
+.barra-de-navegacao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.barra-de-navegacao a {
+  text-decoration: none;
+}
+
+.barra-de-navegacao ul {
+  gap: 10px;
+  margin-right: 50px;
+  font-size: 24px;
+  display: flex;
+  color: #ffffff;
+  list-style: none;
+}
+
+nav.barra-de-navegacao li:hover {
+  background-color: red;
+  transition: 0.5s;
+}
+
+.home {
+  border-radius: 32px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 120px;
+  height: 40px;
+  padding-left: 27px;
+  padding-top: 3px;
+}
+
+.curiosidades {
+  border-radius: 32px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 200px;
+  height: 40px;
+  padding-left: 27px;
+  padding-top: 3px;
+}
+
+.video {
+  border-radius: 32px;
+  background-color: #ffffff;
+  color: #000000;
+  width: 120px;
+  height: 40px;
+  padding-left: 27px;
+  padding-top: 3px;
+}
+
+/* Estilização do main em blocos */
+
+/* Main - Banner + texto sobre a cidade */
+
+.conteiner-main {
+  display: flex;
+  flex-direction: row;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+}
+
+.texto-banner {
+  position: relative;
+}
+
+.texto-banner p {
+  top: 100px;
+  left: 0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-family: "Lato";
+  font-weight: bold;
+  margin: 50px 20px 15px 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.texto-banner span {
+  color: red;
+}
+
+.banner-image img {
+  border-radius: 150px;
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+  filter: blur(0px);
+  padding-left: 45px;
+  padding-right: 45px;
+  opacity: 0.7;
+}
+
+.banner-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 540px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.banner-image:hover::after {
+  opacity: 0.7;
+}
+
+/* Main - Primeira Curiosidades da cidade */
+
+.titulo-retangulos {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 95px;
+  margin-bottom: 30px;
+}
+
+.retangulos-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.retangulo1 {
+  width: 335px;
+  height: 534px;
+  left: 123px;
+  margin-top: 10px;
+  border-radius: 31px;
+  overflow: hidden;
+}
+
+.retangulo1:nth-child(1) {
+  background: url(https://tourb.com.br/img/lugares/sao-paulo/praca-da-liberdade-1.jpg);
+  background-position: center;
+  background-color: rgba(5, 5, 5, 0.8); /* Valor de opacidade: 0.5 */
+  background-blend-mode: darken; /* Define o modo de mesclagem do background */
+
+  transition: transform 0.3s ease; /* Transição suave de 0.3 segundos para a propriedade transform */
+}
+
+.retangulo1:hover {
+  transform: scale(1.05); /* Ao passar o mouse, aumenta o tamanho do card */
+  background-color: rgba(67, 0, 0, 0.826); /* Altera a cor de fundo do card */
+}
+
+.texto-retangulo1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 50px;
+}
+
+.texto-retangulo1 h4 {
+  font-size: 23px;
+  font-family: "Lato";
+  margin-top: 80px;
+}
+
+/* Main - Segunda curiosidade */
+
+.retangulo2 {
+  width: 335px;
+  height: 534px;
+  left: 123px;
+  margin-top: 10px;
+  border-radius: 31px;
+  overflow: hidden;
+}
+
+.retangulo2:nth-child(2) {
+  background: url(https://mercadoeconsumo.com.br/wp-content/uploads/2022/07/pizza-1.jpg);
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Valor de opacidade: 0.5 */
+  background-blend-mode: darken; /* Define o modo de mesclagem do background */
+
+  transition: transform 0.3s ease; /* Transição suave de 0.3 segundos para a propriedade transform */
+}
+
+.retangulo2:hover {
+  transform: scale(1.07); /* Ao passar o mouse, aumenta o tamanho do card */
+  background-color: rgba(67, 0, 0, 0.826); /* Altera a cor de fundo do card */
+}
+
+.texto-retangulo2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+  color: #ffffff;
+}
+
+.texto-retangulo2 h4 {
+  font-size: 23px;
+  font-family: "Lato";
+  margin-top: 130px;
+}
+
+/* Main - Terceira curiosidade */
+
+.retangulo3 {
+  width: 335px;
+  height: 534px;
+  left: 123px;
+  margin-top: 10px;
+  border-radius: 31px;
+  overflow: hidden;
+}
+
+.retangulo3:nth-child(3) {
+  background: url(https://heisenbergconsulting.files.wordpress.com/2017/05/tivoli.jpg?w=662);
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Valor de opacidade: 0.5 */
+  background-blend-mode: darken; /* Define o modo de mesclagem do background */
+
+  transition: transform 0.3s ease; /* Transição suave de 0.3 segundos para a propriedade transform */
+}
+
+.retangulo3:hover {
+  transform: scale(1.07); /* Ao passar o mouse, aumenta o tamanho do card */
+  background-color: rgba(67, 0, 0, 0.826); /* Altera a cor de fundo do card */
+}
+
+.texto-retangulo3 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  padding: 50px;
+}
+.texto-retangulo3 h4 {
+  font-size: 23px;
+  font-family: "Lato";
+  margin-top: 160px;
+}
+
+/* Main - Video da cidade */
+
+.video-section {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.titulo-video h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 33px;
+  font-family: "Righteous", cursive;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 75px;
+  margin-bottom: 5px;
+}
+
+.video-cidade iframe {
+  width:  90vw;
+  max-width: 1000px;
+  height: 534px;
+  border-radius: 20px;
+}
+
+/* Estilização Footer */
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  margin-top: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.titulo-circulos {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Lato";
+  margin-bottom: 20px;
+}
+
+.circulos-container {
+  display: flex;
+  justify-content: center;
+}
+
+.circulo1,
+.circulo2 {
+  margin: 0 10px;
+}
+
+.circulo1 img,
+.circulo2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+
+/* Media Query para 394px ou menor */
+
+@media (max-width: 394px) {
+  .titulo-retangulos h2 {
+    text-align: center;
+  }
+}
+
+
+/* Media Query para 425px ou menor */
+
+@media (max-width: 425px) {
+  .header-conteiner {
+    flex-direction: column;
+  }
+
+  .barra-de-navegacao ul,
+  .logo-titulo,
+  .logo-titulo img {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .banner-image img {
+    display: none;
+  }
+
+  .titulo-video {
+    text-align: center;
+  }
+
+  .video-cidade iframe {
+    width: 350px;
+    height: 200px;
+  }
+
+  .circulos-container,
+  .circulo1,
+  .circulo2 .circulo1 img,
+  .circulo2 img {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+/* Media Query para 632px ou menor */
+
+@media (max-width: 632px) {
+  .header-conteiner {
+    flex-direction: column;
+  }
+
+  .barra-de-navegacao ul,
+  .logo-titulo,
+  .logo-titulo img {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+
+}
